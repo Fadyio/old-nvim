@@ -2,20 +2,22 @@
     <a href="https://github.com/fadyio/nvim/pulse">
       <img alt="Last commit" src="https://img.shields.io/github/last-commit/fadyio/nvim"/>
     </a>
-    <a href="https://github.com/fadyio/nvim/LICENSE">
-      <img src="https://img.shields.io/github/license/lunarvim/lunarvim?style=flat-square&logo=GNU&label=License" alt="License"
+    <a href="https://github.com/fadyio/nvim/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/fadyio/nvim?style=flat-square&logo=MIT&label=License" alt="License"
     />
-    <a href="https://patreon.com/chrisatmachine" title="Donate to this project using Patreon">
+    <a href="https://patreon.com/fady0" title="Donate to this project using Patreon">
       <img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" />
     </a>
-    <a href="https://twitter.com/intent/follow?screen_name=chrisatmachine">
-      <img src="https://img.shields.io/twitter/follow/chrisatmachine?style=social&logo=twitter" alt="follow on Twitter">
+    <a href="https://twitter.com/intent/follow?screen_name=fady_io">
+      <img src="https://img.shields.io/twitter/follow/fady_io?style=social&logo=twitter" alt="follow on Twitter">
     </a>
 </p>
+</div>
 
 
 # Short Intro
 ![Screenshot](./assets/nvim-screenshot.png)
+![Screenshot](./assets/nvim-screenshot2.png)
 
 This is my NeoVim config (for version 0.7 and greater).
 
@@ -78,4 +80,15 @@ Install one of the icon fonts listed [here](https://www.nerdfonts.com/). Just fo
 After installation is complete, don't forget to configure your terminal to start using the new font. 
 Each terminal does this differently, so be sure to checkout [Arch Wiki](https://wiki.archlinux.org/) if you run into any troubles.
 
+## Resources
+
+- [YouTube](https://bit.ly/3OuechY)
+
+- [Twitter](https://twitter.com/fady_io)
+
+<div align="center" id="madewithlua">
+
+[![Lua](https://img.shields.io/badge/Made%20with%20Lua-blue.svg?style=for-the-badge&logo=lua)](#madewithlua)
+
+</div>
 
