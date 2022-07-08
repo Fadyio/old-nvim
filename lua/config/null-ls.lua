@@ -30,7 +30,7 @@ null_ls.setup({
 		formatting.sqlfluff, -- for sql and postgres
 		formatting.yapf, --for python
 		formatting.isort, -- for python
-		-- for macos    formatting.swiftformat, -- for swift
+	  formatting.swiftformat, -- for swift
 
 		-- diagnostics
 		diagnostics.ansiblelint, -- for ansible
