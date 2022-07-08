@@ -15,8 +15,8 @@ require("neorg").setup({
 
 			config = {
 				workspaces = {
-					work = "~/Dropbox/notes/work",
-					fady = "~/Dropbox/notes/fady",
+					work = "~/mega/notes/work",
+					fady = "~/mega/notes/fady",
 				},
 			},
 		},

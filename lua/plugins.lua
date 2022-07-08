@@ -98,6 +98,8 @@ return require("packer").startup(function(use)
 	use("RRethy/nvim-treesitter-endwise")
 	use("windwp/nvim-ts-autotag")
 	use("p00f/nvim-ts-rainbow")
+  -- Clean and elegant distraction-free writing for NeoVim 
+  use ("Pocco81/TrueZen.nvim")
 	-- 	---------------------------------------------------------------------------- }}}
 	-- 	-------------------------------LSP FEATURES------------------------------ {{{
 	use({
