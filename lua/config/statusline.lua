@@ -10,12 +10,54 @@ end
 local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
+local mode_icons = {
+	["n"] = "🄽",
+	["no"] = "🄽",
+	["nov"] = "🄽",
+	["noV"] = "🄽",
+	["no"] = "🄽",
+	["niI"] = "🄽",
+	["niR"] = "🄽",
+	["niV"] = "🄽",
+	["v"] = "🅅",
+	["V"] = "🅅",
+	[""] = "🅅",
+	["s"] = "🅂",
+	["S"] = "🅂",
+	[""] = "🅂",
+	["i"] = "🄸",
+	["ic"] = "🄸",
+	["ix"] = "🄸",
+	["R"] = "🅁",
+	["Rc"] = "🅁",
+	["Rv"] = "🅁",
+	["Rx"] = "🅁",
+	["r"] = "🅁",
+	["rm"] = "🅁",
+	["r?"] = "🅁",
+	["c"] = "🄲",
+	["cv"] = "🄲",
+	["ce"] = "🄲",
+	["!"] = "🅃",
+	["t"] = "🅃",
+	["nt"] = "🅃",
+}
+
+local function get_mode()
+	local mode = vim.api.nvim_get_mode().mode
+	if mode_icons[mode] == nil then
+		print(mode)
+		return mode
+	end
+
+	return mode_icons[mode] .. " "
+end
 
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn" },
-	symbols = { error = " ", warn = " " },
+	sections = { "error", "warn" , "info", "hint"},
+	symbols = { error = " ", warn = " ", hint ="ﯦ ", info=" "},
 	colored = false,
 	always_visible = true,
 }
@@ -50,7 +92,7 @@ lualine.setup({
 		disabled_filetypes = { "alpha", "dashboard" },
 	},
 	sections = {
-		lualine_a = { "mode" },
+		lualine_a = { get_mode },
 		lualine_b = { "branch", diff, diagnostics },
 		--	lualine_c = { "filename" },
 		lualine_x = { "encoding", "fileformat", filetype },
