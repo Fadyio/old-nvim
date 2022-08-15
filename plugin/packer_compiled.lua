@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/home/f0dy/.local/share/nvim/site/pack/packer/start/cmp-cmdline-history",
     url = "https://github.com/dmitmel/cmp-cmdline-history"
   },
-  ["cmp-commit"] = {
-    loaded = true,
-    path = "/home/f0dy/.local/share/nvim/site/pack/packer/start/cmp-commit",
-    url = "https://github.com/Dosx001/cmp-commit"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/f0dy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
