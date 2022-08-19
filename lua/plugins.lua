@@ -190,6 +190,7 @@ return require("packer").startup(function(use)
 	use("titanzero/zephyrium")
 	use("sainnhe/gruvbox-material")
 	use("sainnhe/edge")
+  use("lunarvim/synthwave84.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()
