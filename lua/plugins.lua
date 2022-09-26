@@ -119,13 +119,13 @@ return require("packer").startup(function(use)
 			{ "Shougo/deol.nvim" },
 			{ "dmitmel/cmp-cmdline-history" },
 			-- Snippets
-			{ "L3MON4D3/LuaSnip" },
 			{ "rafamadriz/friendly-snippets" },
 			-- null-ls.nvim
 			{ "jose-elias-alvarez/null-ls.nvim" },
 		},
 	})
-
+  -- luasnip 
+	use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
 	-- code runner
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	-- sourcegraph for nvim
@@ -186,7 +186,7 @@ return require("packer").startup(function(use)
 	use("titanzero/zephyrium")
 	use("sainnhe/gruvbox-material")
 	use("sainnhe/edge")
-  use("lunarvim/synthwave84.nvim")
+	use("lunarvim/synthwave84.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()
