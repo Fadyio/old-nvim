@@ -1,0 +1,14 @@
+{
+  "Newprogram": {
+    "prefix": "newp",
+    "body": "fuschsldfjhsldkfjslkdfjf",
+    "description": ""
+  },
+  "println": {
+    "prefix": "prn",
+    "body": [
+      "println!(\"${1:value}\");"
+    ],
+    "description": "println"
+  }
+}
