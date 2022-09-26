@@ -109,6 +109,7 @@ return require("packer").startup(function(use)
 
 			-- Autocompletion
 			{ "hrsh7th/nvim-cmp" },
+			{ "PaterJason/cmp-conjure" },
 			{ "hrsh7th/cmp-buffer" },
 			{ "hrsh7th/cmp-path" },
 			{ "saadparwaiz1/cmp_luasnip" },
@@ -119,13 +120,14 @@ return require("packer").startup(function(use)
 			{ "Shougo/deol.nvim" },
 			{ "dmitmel/cmp-cmdline-history" },
 			-- Snippets
+			{ "L3MON4D3/LuaSnip" },
 			{ "rafamadriz/friendly-snippets" },
 			-- null-ls.nvim
 			{ "jose-elias-alvarez/null-ls.nvim" },
 		},
 	})
-  -- luasnip 
-	use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
+	-- add lisp support
+	use({ "Olical/conjure" })
 	-- code runner
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	-- sourcegraph for nvim

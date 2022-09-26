@@ -103,6 +103,7 @@ cmp.setup({
 				treesitter = "tree",
 				cmdline_history = "cmdH",
 				cmd = "cmd",
+				conjure = "conjure",
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -114,8 +115,7 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "path" },
 		{ name = "treesitter" },
-		{ name = "cmdline" },
-		{ name = "cmdline_history" },
+		{ name = "conjure" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
@@ -126,7 +126,6 @@ cmp.setup({
 		native_menu = false,
 		ghost_text = true,
 	},
-
 })
 
 -- Use buffer source for `/`
@@ -143,16 +142,19 @@ cmp.setup.cmdline(":", {
 		{ name = "path" },
 	}, {
 		{ name = "cmdline" },
+		{
+			{ name = "cmdline_history" },
+		},
 	}),
 })
 
 -- setup zsh compluting
-_ = vim.cmd [[
+_ = vim.cmd([[
   augroup CmpZsh
     au!
     autocmd Filetype zsh lua require'cmp'.setup.buffer { sources = { { name = "zsh" }, } }
   augroup END
-]]
+]])
 
 vim.cmd([[
 " gray
