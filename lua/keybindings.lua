@@ -60,3 +60,18 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- comment-box.nvim
+local keymap = vim.api.nvim_set_keymap
+
+-- left aligned fixed size box with left aligned text
+keymap("n", "<Leader>nn", "<Cmd>lua require('comment-box').lbox()<CR>", {})
+keymap("v", "<Leader>nn", "<Cmd>lua require('comment-box').lbox()<CR>", {})
+
+-- centered adapted box with centered text
+keymap("n", "<Leader>nc", "<Cmd>lua require('comment-box').accbox()<CR>", {})
+keymap("v", "<Leader>nc", "<Cmd>lua require('comment-box').accbox()<CR>", {})
+
+-- centered line
+keymap("n", "<Leader>nl", "<Cmd>lua require('comment-box').cline()<CR>", {})
+keymap("i", "<M-l>", "<Cmd>lua require('comment-box').cline()<CR>", {})
