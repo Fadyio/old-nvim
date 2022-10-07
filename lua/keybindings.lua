@@ -1,7 +1,9 @@
--- Written by @Fadynagh from http://fadyio.com
--- Email:me@fadyio.com
--- Github: @Fadyio
---
+--  ╭──────────────────────────────────────────────────────────╮
+--  │  Written by @Fadynagh from http://fadyio.com             │
+--  │  Email:me@fadyio.com                                     │
+--  │  Github: @Fadyio                                         │
+--  ╰──────────────────────────────────────────────────────────╯
+
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
