@@ -1,6 +1,6 @@
 -- Written by @Fadynagh from http://fadyio.com
 -- Email:me@fadyio.com
--- Github: @fady0
+-- Github: @Fadyio
 --
 
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")

@@ -81,6 +81,10 @@ return require("packer").startup(function(use)
   use("rcarriga/nvim-notify")
   -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
   use("folke/noice.nvim")
+  -- Clarify and beautify your comments using boxes and lines.
+  use("LudoPinelli/comment-box.nvim")
+  --  Start your search from a more comfortable place
+  use("VonHeikemen/searchbox.nvim")
 
   -- markdown previewer
   use({

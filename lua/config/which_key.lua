@@ -91,6 +91,7 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
+  ["R"] = { "<cmd>SearchBoxReplace<CR>", "replace word" },
   ["x"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
   --[[ ["R"] = { "<cmd>SearchBoxReplace<CR>", "replace word" }, ]]
   ["f"] = {

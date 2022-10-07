@@ -1,6 +1,6 @@
 -- Written by @Fadynagh from http://fadyio.com
 -- Email:me@fadyio.com
--- Github: @fady0
+-- Github: @Fadyio
 --
 -- Shorten function name
 local keymap = vim.keymap.set
@@ -30,7 +30,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- SearchBox
 --[[ keymap("n", "/", ":SearchBoxIncSearch<CR>", { noremap = true }) ]]
---[[ keymap("n", "<leader>s/", ":SearchBoxReplace<CR>", { noremap = true }) ]]
+keymap("n", "<leader>s/", ":SearchBoxReplace<CR>", { noremap = true })
+
 -- unhighlight what you searched for
 keymap("n", "<Esc><Esc>", "<Esc>:nohlsearch<CR><Esc>", { noremap = true })
 -- Insert --
