@@ -72,7 +72,7 @@ return require("packer").startup(function(use)
 	-- A high-performance color highlighter for Neovim
 	use("norcalli/nvim-colorizer.lua")
 	-- This plugin provides the same icons as well as colors for each icon.
-	use("kyazdani42/nvim-web-devicons")
+	use("nvim-tree/nvim-web-devicons")
 	-- Highlight words and lines on the cursor for Neovim
 	use("RRethy/vim-illuminate")
 	-- Neovim statusline written in Lua.
@@ -117,7 +117,6 @@ return require("packer").startup(function(use)
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
 			{ "jayp0521/mason-null-ls.nvim" },
-			{ "jayp0521/mason-nvim-dap.nvim" },
 			{ "jayp0521/mason-nvim-dap.nvim" },
 			-- cmp plugins
 			{ "hrsh7th/nvim-cmp" },
