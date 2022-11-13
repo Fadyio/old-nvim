@@ -185,6 +185,7 @@ return require("packer").startup(function(use)
 	-------------------------------  colorScheme  ------------------------------ {{{
 
 	use("projekt0n/github-nvim-theme")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("mhartington/oceanic-next")
 	use("titanzero/zephyrium")
 	use("sainnhe/gruvbox-material")

@@ -48,13 +48,12 @@ null_ls.setup({
 		formatting.shfmt, -- for shell
 		formatting.sql_formatter, -- formatter for different query languages
 		formatting.terraform_fmt, -- The terraform-fmt command rewrites terraform
-		formatting.trim_newlines, -- A simple wrapper around awk to remove trailing newlines.
-		formatting.trim_whitespace, -- A simple wrapper around awk to remove trailing whitespace.
+		formatting.trim_newlines.with({ disabled_filetypes = { "yaml", "yml" } }), -- A simple wrapper around awk to remove trailing newlines.
+		formatting.trim_whitespace.with({ disabled_filetypes = { "yml", "yaml" } }), -- A simple wrapper around awk to remove trailing whitespace.
 		formatting.yamlfmt, -- yamlfmt is an extensible command line tool
 
 		-- diagnostics
 		diagnostics.ansiblelint, -- for ansible
-		diagnostics.cfn_lint.with({ extra_args = { "--format" } }), -- for cloudformation
 		diagnostics.cppcheck, -- for c and c++
 		diagnostics.eslint_d, -- for javascript
 		diagnostics.cpplint, -- tool to check C/C++ files for style issues following Google's C++ style guide

@@ -1,6 +1,6 @@
 -- Written by @Fadynagh from http://fadyio.com
 -- Email:me@fadyio.com
--- Github: @fady0
+-- Github: @fadyio
 --
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
@@ -8,9 +8,10 @@ if not status_ok then
 end
 
 local setup = {
+	active = true,
 	plugins = {
-		marks = true, -- shows a list of your marks on ' and `
-		registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+		marks = false, -- shows a list of your marks on ' and `
+		registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
 		spelling = {
 			enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
 			suggestions = 20, -- how many suggestions should be shown in the list?
@@ -19,12 +20,12 @@ local setup = {
 		-- No actual key bindings are created
 		presets = {
 			operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
-			motions = true, -- adds help for motions
-			text_objects = true, -- help for text objects triggered after entering an operator
-			windows = true, -- default bindings on <c-w>
-			nav = true, -- misc bindings to work with windows
-			z = true, -- bindings for folds, spelling and others prefixed with z
-			g = true, -- bindings for prefixed with g
+			motions = false, -- adds help for motions
+			text_objects = false, -- help for text objects triggered after entering an operator
+			windows = false, -- default bindings on <c-w>
+			nav = false, -- misc bindings to work with windows
+			z = false, -- bindings for folds, spelling and others prefixed with z
+			g = false, -- bindings for prefixed with g
 		},
 	},
 	-- add operators that will trigger motion and text object completion
@@ -39,15 +40,15 @@ local setup = {
 	},
 	icons = {
 		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-		separator = "➜", -- symbol used between a key and it's label
-		group = "+", -- symbol prepended to a group
+		separator = "", -- symbol used between a key and it's label
+		group = " ", -- symbol prepended to a group
 	},
 	popup_mappings = {
 		scroll_down = "<c-d>", -- binding to scroll down inside the popup
 		scroll_up = "<c-u>", -- binding to scroll up inside the popup
 	},
 	window = {
-		border = "rounded", -- none, single, double, shadow
+		border = "single", -- none, single, double, shadow
 		position = "bottom", -- bottom, top
 		margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
 		padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
@@ -59,7 +60,7 @@ local setup = {
 		spacing = 3, -- spacing between columns
 		align = "left", -- align columns left, center or right
 	},
-	ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
+	ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
 	hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
 	show_help = true, -- show help message on the command line when the popup is visible
 	triggers = "auto", -- automatically setup triggers
@@ -82,6 +83,15 @@ local opts = {
 	nowait = true, -- use `nowait` when creating keymaps
 }
 
+local vopts = {
+	mode = "v", -- VISUAL mode
+	prefix = "<leader>",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["b"] = {
@@ -93,7 +103,7 @@ local mappings = {
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["R"] = { "<cmd>SearchBoxReplace<CR>", "replace word" },
 	["x"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
-	--[[ ["R"] = { "<cmd>SearchBoxReplace<CR>", "replace word" }, ]]
+	["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Find files",
@@ -113,22 +123,57 @@ local mappings = {
 		S = { "<cmd>PackerStatus<cr>", "Status" },
 		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
-
 	g = {
 		name = "Git",
-		g = { "<cmd>LazyGit<CR>", "Lazygit" },
-		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+		g = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", "Lazygit" },
+		j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
+		k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
 		s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-		u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
+		u = {
+			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+			"Undo Stage Hunk",
+		},
 		o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-		d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
+		C = {
+			"<cmd>Telescope git_bcommits<cr>",
+			"Checkout commit(for current file)",
+		},
+		d = {
+			"<cmd>Gitsigns diffthis HEAD<cr>",
+			"Git Diff",
+		},
+	},
+
+	b = {
+		name = "Buffers",
+		j = { "<cmd>BufferLinePick<cr>", "Jump" },
+		f = { "<cmd>Telescope buffers<cr>", "Find" },
+		b = { "<cmd>BufferLineCyclePrev<cr>", "Previous" },
+		n = { "<cmd>BufferLineCycleNext<cr>", "Next" },
+		-- w = { "<cmd>BufferWipeout<cr>", "Wipeout" }, -- TODO: implement this for bufferline
+		e = {
+			"<cmd>BufferLinePickClose<cr>",
+			"Pick which buffer to close",
+		},
+		h = { "<cmd>BufferLineCloseLeft<cr>", "Close all to the left" },
+		l = {
+			"<cmd>BufferLineCloseRight<cr>",
+			"Close all to the right",
+		},
+		D = {
+			"<cmd>BufferLineSortByDirectory<cr>",
+			"Sort by directory",
+		},
+		L = {
+			"<cmd>BufferLineSortByExtension<cr>",
+			"Sort by language",
+		},
 	},
 
 	l = {
@@ -195,6 +240,14 @@ local mappings = {
 		l = { "<cmd>TodoLocList<CR>", "Todo LocList" }, --This uses the location list to show all todos in your project.
 		t = { "<cmd>TodoTelescope<CR>", "Todo Telescope" }, --Search through all project todos with Telescope
 	},
+
+	-- " Available Debug Adapters:
+	-- "   https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/
+	-- " Adapter configuration and installation instructions:
+	-- "   https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
+	-- " Debug Adapter protocol:
+	-- "   https://microsoft.github.io/debug-adapter-protocol/
+	-- " Debugging
 	d = {
 		name = "Debug",
 		t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
@@ -215,13 +268,20 @@ local mappings = {
 	s = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		C = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+		f = { "<cmd>Telescope find_files<cr>", "Find File" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+		H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
+		t = { "<cmd>Telescope live_grep<cr>", "Text" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		c = { "<cmd>Telescope commands<cr>", "Commands" },
+		p = {
+			"<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
+			"Colorscheme with Preview",
+		},
 	},
 }
 
