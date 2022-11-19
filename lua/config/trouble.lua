@@ -1,6 +1,6 @@
 -- Written by @Fadynagh from http://fadyio.com
 -- Email:me@fadyio.com
--- Github: @fady0
+-- Github: @fadyio
 --
 require("trouble").setup({
 	position = "bottom", -- position of the list can be: bottom, top, left, right
@@ -47,5 +47,5 @@ require("trouble").setup({
 		information = "",
 		other = "﫠",
 	},
-	use_diagnostic_signs = false, -- enabling this will use the signs defined in your lsp client
+	use_diagnostic_signs = true, -- enabling this will use the signs defined in your lsp client
 })

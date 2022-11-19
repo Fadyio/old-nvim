@@ -1,6 +1,6 @@
 -- Written by @Fadynagh from http://fadyio.com
 -- Email:me@fadyio.com
--- Github: @fady0
+-- Github: @fadyio
 --
 require("todo-comments").setup({
 	signs = true, -- show icons in the signs column
