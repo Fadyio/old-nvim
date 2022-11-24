@@ -85,6 +85,8 @@ return require("packer").startup(function(use)
 	use("folke/noice.nvim")
 	--  Start your search from a more comfortable place
 	use("VonHeikemen/searchbox.nvim")
+	--  Treesitter based structural search and replace plugin for Neovim.
+	use("cshuaimin/ssr.nvim")
 
 	-- markdown previewer
 	use({
