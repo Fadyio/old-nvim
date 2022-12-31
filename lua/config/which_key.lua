@@ -205,7 +205,7 @@ local mappings = {
 	r = {
 		name = "code runner",
 		d = { "<Cmd>SnipRun<CR>", "Line Run" },
-		s = { "<cmd>SnipReset<CR>", "Snip Reset" },
+		r = { "<cmd>SnipReset<CR>", "Snip Reset" },
 		i = { "<cmd>SnipInfo<CR>", "Snip Info" },
 	},
 	m = {
