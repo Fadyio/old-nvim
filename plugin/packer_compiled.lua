@@ -376,6 +376,11 @@ _G.packer_plugins = {
     path = "/home/f0dy/.local/share/nvim/site/pack/packer/start/sqlite.lua",
     url = "https://github.com/tami5/sqlite.lua"
   },
+  ["ssr.nvim"] = {
+    loaded = true,
+    path = "/home/f0dy/.local/share/nvim/site/pack/packer/start/ssr.nvim",
+    url = "https://github.com/cshuaimin/ssr.nvim"
+  },
   ["synthwave84.nvim"] = {
     loaded = true,
     path = "/home/f0dy/.local/share/nvim/site/pack/packer/start/synthwave84.nvim",

@@ -58,7 +58,6 @@ return require("packer").startup(function(use)
 	use("lewis6991/impatient.nvim")
 	-- highly opinionated wrapper for storing, retrieving, caching, and persisting SQLite
 	use("tami5/sqlite.lua")
-
 	---------------------------------------------------------------------------- }}}
 	---------------------------------APPEARANCE--------------------------------- {{{
 	-- customizable start screen for neovim.
