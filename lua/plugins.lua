@@ -1,5 +1,5 @@
 --[[
- -- Written by @Fadynagh from http://fadyio.com
+ -- Written by Fady nagh from http://fadyio.com
  -- Email:me@fadyio.com
  -- Github: @fadyio
 ---------------------------------------------------------------------
@@ -76,8 +76,6 @@ return require("packer").startup(function(use)
 	use("RRethy/vim-illuminate")
 	-- Neovim statusline written in Lua.
 	use("nvim-lualine/lualine.nvim")
-	-- simple status line component that shows context of the current cursor position in file.
-	use("SmiteshP/nvim-gps")
 	--A fancy, configurable, notification manager for NeoVim
 	use("rcarriga/nvim-notify")
 	-- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
@@ -149,8 +147,6 @@ return require("packer").startup(function(use)
 	use("ravenxrz/DAPInstall.nvim")
 	-- 	---------------------------------------------------------------------------- }}}
 	-- 	-------------------------------EDITOR FEATURES------------------------------ {{{
-	-- Smooth scrolling for ANY movement command
-	use("declancm/cinnamon.nvim")
 	-- Smart and Powerful commenting plugin for neovim
 	use("numToStr/Comment.nvim")
 	-- powerful autopair plugin for Neovim that supports multiple characters
@@ -185,13 +181,10 @@ return require("packer").startup(function(use)
 	---------------------------------------------------------------------------- }}}
 	-------------------------------  colorScheme  ------------------------------ {{{
 
-	use("projekt0n/github-nvim-theme")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("mhartington/oceanic-next")
 	use("titanzero/zephyrium")
 	use("sainnhe/gruvbox-material")
-	use("folke/tokyonight.nvim")
-	use("sainnhe/edge")
 	use("lunarvim/synthwave84.nvim")
 
 	if packer_bootstrap then

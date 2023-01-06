@@ -1,28 +1,38 @@
-<div align="center"><p>
-    <a href="https://github.com/fadyio/nvim/pulse">
-      <img alt="Last commit" src="https://img.shields.io/github/last-commit/fadyio/nvim"/>
-    </a>
-    <a href="https://github.com/fadyio/nvim/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/fadyio/nvim?style=flat-square&logo=MIT&label=License" alt="License"
+<p align="center">
+
+[![](https://img.shields.io/badge/Neovim-0.9+-blueviolet.svg?style=for-the-badge&logo=Neovim&color=ee999f&logoColor=D9E0EE&labelColor=302D41)](https://github.com/neovim/neovim)
+  <a href="https://github.com/Fadyio/nvim/stargazers">
+    <img
+      alt="Stargazers"
+      src="https://img.shields.io/github/stars/Fadyio/nvim?style=for-the-badge&logo=starship&color=c678dd&logoColor=d9e0ee&labelColor=282a36"
     />
-    <a href="https://patreon.com/fady0" title="Donate to this project using Patreon">
-      <img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" />
-    </a>
-    <a href="https://twitter.com/intent/follow?screen_name=fady_io">
-      <img src="https://img.shields.io/twitter/follow/fady_io?style=social&logo=twitter" alt="follow on Twitter">
-    </a>
+  </a>
+  <a href="https://github.com/Fadyio/nvim/issues">
+    <img
+      alt="Issues"
+      src="https://img.shields.io/github/issues/Fadyio/nvim?style=for-the-badge&logo=gitbook&color=f0c062&logoColor=d9e0ee&labelColor=282a36"
+    />
+  </a>
+  <a href="https://github.com/Fadyio/nvim/contributors">
+    <img
+      alt="Contributors"
+      src="https://img.shields.io/github/contributors/Fadyio/nvim?style=for-the-badge&logo=opensourceinitiative&color=abcf84&logoColor=d9e0ee&labelColor=282a36"
+    />
+  </a>
 </p>
-</div>
 
 
-# Short Intro
-![Screenshot](./assets/nvim-screenshot.png)
-![Screenshot](./assets/nvim-screenshot2.png)
+
+# Screenshot
+![Screenshot](./assets/Screenshot1.png)
+![Screenshot](./assets/Screenshot2.png)
+![Screenshot](./assets/Screenshot3.png)
+![Screenshot](./assets/Screenshot4.png)
 
 This is my NeoVim config (for version 0.7 and greater).
 
-* Autocompletion 
-* Highlighting 
+* Autocompletion
+* Highlighting
 * Navigation
     * Find definition/declaration/implementation...
     * Find all references (of variables, methods, classes...)
@@ -62,10 +72,10 @@ This is my NeoVim config (for version 0.7 and greater).
 ## Installation
 1. Download this repo
 ```bash
-git clone git@github.com:fadyio/nvim.git
+git clone https://github.com/Fadyio/nvim
 ```
-2. Put the contents of this repo where NeoVim can find them. On Linux this is most likely `$HOME/.config/nvim`.
-On Linux this is `$HOME/.local/share/nvim`. Otherwise check the output of `:lua print(vim.fn.stdpath('data'))`.
+2. Put the contents of this repo where NeoVim can find them. On Linux this is most likely `$HOME/.config/nvim`,
+Otherwise check the output of `:lua print(vim.fn.stdpath('data'))`.
 3. Open NeoVim and let it install Packer and all the dependencies (ignore the errors).
 4. Open NeoVim again and wait for nvim-treesitter to install all of its dependencies (ignore the errors).
 
@@ -77,18 +87,24 @@ Icons and other special characters are used all around the config to give NeoVim
 However, your terminal will not display these icons correctly unless it uses the correct font.
 
 Install one of the icon fonts listed [here](https://www.nerdfonts.com/). Just follow their instructions for your specific OS.
-After installation is complete, don't forget to configure your terminal to start using the new font. 
+After installation is complete, don't forget to configure your terminal to start using the new font.
 Each terminal does this differently, so be sure to checkout [Arch Wiki](https://wiki.archlinux.org/) if you run into any troubles.
 
-## Resources
-
-- [YouTube](https://bit.ly/3OuechY)
 
 - [Twitter](https://twitter.com/fady_io)
 
+<p align="center">
+  Copyright &copy; 2020-present
+  <a href="https://github.com/Fadyio" target="_blank">Fady</a>
+</p>
+<p align="center">
+  <a href="https://github.com/Fadyio/nvim/blob/master/LICENSE"
+    ><img
+      src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=282a36&colorB=c678dd"
+  /></a>
+</p>
 <div align="center" id="madewithlua">
 
 [![Lua](https://img.shields.io/badge/Made%20with%20Lua-blue.svg?style=for-the-badge&logo=lua)](#madewithlua)
 
 </div>
-
