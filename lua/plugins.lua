@@ -84,6 +84,8 @@ return require("packer").startup(function(use)
 	use("VonHeikemen/searchbox.nvim")
 	--  Treesitter based structural search and replace plugin for Neovim.
 	use("cshuaimin/ssr.nvim")
+	--  Go development plugin for Vim
+	use("fatih/vim-go")
 
 	-- markdown previewer
 	use({
