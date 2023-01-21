@@ -94,10 +94,6 @@ local vopts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["b"] = {
-		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-		"Buffers",
-	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
@@ -227,7 +223,7 @@ local mappings = {
 
 	t = {
 		name = "Trouble",
-		x = { "<cmd>Trouble<CR>", "Trouble Toggle " },
+		t = { "<cmd>Trouble<CR>", "Trouble Toggle " },
 		w = { "<cmd>Trouble workspace_diagnostics<CR>", "workspace diagnostics" },
 		d = { "<cmd>Trouble document_diagnostics<CR>", "document diagnostics" },
 		l = { "<cmd>Trouble loclist<CR>", "Trouble loclist " },
@@ -268,9 +264,9 @@ local mappings = {
 	s = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+		C = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 		f = { "<cmd>Telescope find_files<cr>", "Find File" },
-		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+		d = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },

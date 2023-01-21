@@ -138,6 +138,8 @@ return require("packer").startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	-- code runner
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
+	--   Maximizes and restores the current window in Vim.
+	use("szw/vim-maximizer")
 
 	-- 	---------------------------------------------------------------------------- }}}k
 	-- 	-------------------------------  Debug Adapter ------------------------------ {{{

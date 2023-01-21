@@ -23,6 +23,9 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
+-- delete char without copying it
+keymap("n", "x", '"_x')
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -58,6 +61,18 @@ keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.curren
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+
+-- splits
+keymap("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
+keymap("n", "<leader>se", "<C-w>=") -- split windows equal width
+keymap("n", "<leader>sx", ":close<CR>") --  close the current split window
+
+-- tabs
+keymap("n", "<leader>to", ":tabnew<CR>") -- open new tab
+
+--  Maximizes and restores the current window in Vim.
+keymap("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- Visual Block --
 -- Move text up and down
