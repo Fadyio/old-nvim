@@ -80,8 +80,6 @@ return require("packer").startup(function(use)
 	use("rcarriga/nvim-notify")
 	-- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 	use("folke/noice.nvim")
-	--  Start your search from a more comfortable place
-	use("VonHeikemen/searchbox.nvim")
 	--  Treesitter based structural search and replace plugin for Neovim.
 	use("cshuaimin/ssr.nvim")
 	--  Go development plugin for Vim
@@ -160,8 +158,6 @@ return require("packer").startup(function(use)
 	-- GIT
 	use("lewis6991/gitsigns.nvim")
 	use("kdheepak/lazygit.nvim")
-	-- magit for neovim
-	use("TimUntersberger/neogit")
 	-- A pretty diagnostics, references, telescope results, quickfix and location list
 	use("folke/trouble.nvim")
 	-- white_check_mark Highlight, list and search todo comments in your projects

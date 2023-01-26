@@ -97,7 +97,6 @@ local mappings = {
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["R"] = { "<cmd>SearchBoxReplace<CR>", "replace word" },
 	["x"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
 	["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
 	["f"] = {
@@ -121,7 +120,7 @@ local mappings = {
 	},
 	g = {
 		name = "Git",
-		g = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", "Lazygit" },
+		g = { "<cmd>LazyGit<cr>", "Lazygit" },
 		j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
 		k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
