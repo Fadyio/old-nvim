@@ -142,11 +142,11 @@ return require("packer").startup(function(use)
 	-- 	---------------------------------------------------------------------------- }}}k
 	-- 	-------------------------------  Debug Adapter ------------------------------ {{{
 	-- DAP (Debug Adapter Protocol)
-	use("mfussenegger/nvim-dap")
-	-- nvim-dap-ui
-	use("rcarriga/nvim-dap-ui")
-	-- A NeoVim plugin for managing several debuggers for Nvim-dap
-	use("ravenxrz/DAPInstall.nvim")
+	-- use("mfussenegger/nvim-dap")
+	-- -- nvim-dap-ui
+	-- use("rcarriga/nvim-dap-ui")
+	-- -- A NeoVim plugin for managing several debuggers for Nvim-dap
+	-- use("ravenxrz/DAPInstall.nvim")
 	-- 	---------------------------------------------------------------------------- }}}
 	-- 	-------------------------------EDITOR FEATURES------------------------------ {{{
 	-- Smart and Powerful commenting plugin for neovim
