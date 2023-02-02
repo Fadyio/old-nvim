@@ -1,11 +1,13 @@
---[[
- -- Written by Fady nagh from http://fadyio.com
- -- Email:me@fadyio.com
- -- Github: @fadyio
----------------------------------------------------------------------
-                                 My Neovim Plugins
----------------------------------------------------------------------
---]]
+--                ╭─────────────────────────────────────────────╮
+--                │ Written by Fady nagh from http://fadyio.com │
+--                │                                             │
+--                │             Email:me@fadyio.com             │
+--                │                                             │
+--                │               Github: @fadyio               │
+--                │                                             │
+--                │              My Neovim Plugins              │
+--                ╰─────────────────────────────────────────────╯
+
 -- Bootstrapping Packer Plugins manager
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -137,8 +139,8 @@ return require("packer").startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	-- code runner
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
-	--   Maximizes and restores the current window in Vim.
-	use("szw/vim-maximizer")
+	--  Clarify and beautify your comments using boxes and lines.
+	use("LudoPinelli/comment-box.nvim")
 
 	-- 	---------------------------------------------------------------------------- }}}k
 	-- 	-------------------------------  Debug Adapter ------------------------------ {{{

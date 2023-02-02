@@ -144,33 +144,6 @@ local mappings = {
 			"Git Diff",
 		},
 	},
-
-	b = {
-		name = "Buffers",
-		j = { "<cmd>BufferLinePick<cr>", "Jump" },
-		f = { "<cmd>Telescope buffers<cr>", "Find" },
-		b = { "<cmd>BufferLineCyclePrev<cr>", "Previous" },
-		n = { "<cmd>BufferLineCycleNext<cr>", "Next" },
-		-- w = { "<cmd>BufferWipeout<cr>", "Wipeout" }, -- TODO: implement this for bufferline
-		e = {
-			"<cmd>BufferLinePickClose<cr>",
-			"Pick which buffer to close",
-		},
-		h = { "<cmd>BufferLineCloseLeft<cr>", "Close all to the left" },
-		l = {
-			"<cmd>BufferLineCloseRight<cr>",
-			"Close all to the right",
-		},
-		D = {
-			"<cmd>BufferLineSortByDirectory<cr>",
-			"Sort by directory",
-		},
-		L = {
-			"<cmd>BufferLineSortByExtension<cr>",
-			"Sort by language",
-		},
-	},
-
 	l = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
