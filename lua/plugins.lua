@@ -88,13 +88,10 @@ return require("packer").startup(function(use)
 	-- markdown previewer
 	use({
 		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
+		run = function()
+			vim.fn["mkdp#util#install"]()
 		end,
-		ft = { "markdown" },
 	})
-
 	-- nvim-treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -135,6 +132,8 @@ return require("packer").startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	--  Clarify and beautify your comments using boxes and lines.
 	use("LudoPinelli/comment-box.nvim")
+	--  vscode-like pictograms for neovim lsp completion items
+	use("onsails/lspkind.nvim")
 
 	-- 	---------------------------------------------------------------------------- }}}k
 	-- 	-------------------------------  Debug Adapter ------------------------------ {{{

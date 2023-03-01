@@ -1,9 +1,14 @@
---[[
- -- Written by @Fadynagh from http://fadyio.com
- -- Email:me@fadyio.com
- -- Github: @fadyio
+--                ╭─────────────────────────────────────────────╮
+--                │ Written by @Fadynagh from http://fadyio.com │
+--                │             Email:me@fadyio.com             │
+--                │               Github: @fadyio               │
+--                ╰─────────────────────────────────────────────╯
+
 ---------------------------------------------------------------------
-                                 settings
+--                                 ╭──────────╮
+--                                 │ settings │
+--                                 ╰──────────╯
+
 ---------------------------------------------------------------------
 --]]
 local cmd = vim.cmd
