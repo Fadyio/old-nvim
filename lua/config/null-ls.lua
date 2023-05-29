@@ -42,7 +42,6 @@ null_ls.setup({
 		formatting.isort, --Python utility / library to sort imports alphabetically and automatically separate
 		formatting.jq, -- Command-line JSON processor
 		formatting.pg_format, -- PostgreSQL SQL syntax beautifier
-		formatting.rubocop, -- Ruby static code analyzer and formatter
 		formatting.rustfmt, -- for rust
 		formatting.shellharden, -- For shell
 		formatting.shfmt, -- for shell
