@@ -62,7 +62,6 @@ null_ls.setup({
 		diagnostics.staticcheck, -- For Go
 		diagnostics.hadolint, -- for Dockerfile
 		diagnostics.luacheck, -- for lua
-		diagnostics.rubocop, -- For ruby
 		diagnostics.todo_comments, -- For Todo comments
 		diagnostics.trail_space, -- Uses inbuilt Lua code to detect lines with trailing whitespace
 		diagnostics.shellcheck, -- for shell
