@@ -47,6 +47,14 @@ local plugins = {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 	},
+	--  tmux integration for nvim features pane movement and resizing from within nvim.
+	{
+		"aserowy/tmux.nvim",
+		config = function()
+			return require("tmux").setup()
+		end,
+	},
+
 	-- A high-performance color highlighter for Neovim
 	"norcalli/nvim-colorizer.lua",
 	-- Highlight words and lines on the cursor for Neovim
@@ -140,6 +148,8 @@ local plugins = {
 		},
 		cmd = "Registers",
 	},
+	--  Seamless navigation between tmux panes and vim splits
+	"christoomey/vim-tmux-navigator",
 	---------------------------------------------------------------------------- }}}
 	-------------------------------  colorScheme  ------------------------------ {{{
 

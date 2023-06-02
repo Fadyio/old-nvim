@@ -21,26 +21,24 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
 	dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
 	dashboard.button("e", " " .. " New file", ":ene <BAR> startinsert <CR>"),
-	dashboard.button("p", " " .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
-	dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
-	dashboard.button("t", " " .. " Find text", ":Telescope live_grep <CR>"),
+	dashboard.button("p", " " .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
+	dashboard.button("r", "󰄉 " .. " Recent files", ":Telescope oldfiles <CR>"),
+	dashboard.button("t", "󰷾 " .. " Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
 	dashboard.button("q", " " .. " Quit", ":qa<CR>"),
 }
 
 dashboard.section.footer.opts.hl = "Type"
-dashboard.section.header.opts.hl = "Include"
 dashboard.section.buttons.opts.hl = "Keyword"
 
-local function footer()
-	-- NOTE: requires the fortune-mod package to work
-	-- local fortune = handle:read("*a")
-	-- handle:close()
-	-- return fortune
-	return "FADYNVIM"
-end
-
-dashboard.section.footer.val = footer()
+vim.api.nvim_create_autocmd("User", {
+	callback = function()
+		local stats = require("lazy").stats()
+		local ms = math.floor(stats.startuptime * 100) / 100
+		dashboard.section.footer.val = "󱐌 Lazy-loaded " .. stats.loaded .. " plugins in " .. ms .. "ms"
+		pcall(vim.cmd.AlphaRedraw)
+	end,
+})
 
 dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
