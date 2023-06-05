@@ -39,7 +39,11 @@ local plugins = {
 	-- adds indentation guides to all lines (including empty lines).
 	"lukas-reineke/indent-blankline.nvim",
 	-- bufferline
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+	},
 	-- nvim-treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
