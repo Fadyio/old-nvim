@@ -1,11 +1,8 @@
---[[
- -- Written by @Fadynagh from http://fadyio.com
- -- Email:me@fadyio.com
- -- Github: @fadyio
----------------------------------------------------------------------
-                                 My Neovim Config
----------------------------------------------------------------------
---]]
+--                ╭─────────────────────────────────────────────╮
+--                │ Written by Fady nagh from http://fadyio.com │
+--                │             Email:me@fadyio.com             │
+--                │               Github: @fadyio               │
+--                ╰─────────────────────────────────────────────╯
 
 -- Neovim Lua script to dynamically load .lua config files
 function requirePath(path)
@@ -22,12 +19,13 @@ function requirePath(path)
 end
 
 ------------------------------------------------------
+--- All My plugins and it's configurations
 --- All My Settings
-require("options")
---- All My plugins
-require("Plugins")
+require("Fady/options")
+-- All my Plugins
+require("Fady/Plugins")
 --- All My Keybindings
-require("keybindings")
+require("Fady/keybindings")
 --- load autocommands
-require("autocommands")
-requirePath("config")
+require("Fady/autocommands")
+requirePath("Fady/config")
