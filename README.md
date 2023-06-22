@@ -24,10 +24,11 @@
 
 
 # Screenshot
-![Screenshot](./assets/Screenshot1.png)
-![Screenshot](./assets/Screenshot2.png)
-![Screenshot](./assets/Screenshot3.png)
-![Screenshot](./assets/Screenshot4.png)
+![Screenshot](./assets/Nvim1.png)
+![Screenshot](./assets/Nvim2.png)
+![Screenshot](./assets/Nvim3.png)
+![Screenshot](./assets/Nvim4.png)
+![Screenshot](./assets/Nvim5.png)
 
 This is my NeoVim config (for version 0.7 and greater).
 
@@ -91,7 +92,6 @@ After installation is complete, don't forget to configure your terminal to start
 Each terminal does this differently, so be sure to checkout [Arch Wiki](https://wiki.archlinux.org/) if you run into any troubles.
 
 
-- [Twitter](https://twitter.com/fady_io)
 
 <p align="center">
   Copyright &copy; 2020-present
