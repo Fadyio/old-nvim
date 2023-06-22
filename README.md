@@ -77,7 +77,7 @@ git clone https://github.com/Fadyio/nvim
 ```
 2. Put the contents of this repo where NeoVim can find them. On Linux this is most likely `$HOME/.config/nvim`,
 Otherwise check the output of `:lua print(vim.fn.stdpath('data'))`.
-3. Open NeoVim and let it install Packer and all the dependencies (ignore the errors).
+3. Open NeoVim and let it install LazyNvim and all the dependencies (ignore the errors).
 4. Open NeoVim again and wait for nvim-treesitter to install all of its dependencies (ignore the errors).
 
 If you're updating an existing config and you're facing some issues,
@@ -95,7 +95,7 @@ Each terminal does this differently, so be sure to checkout [Arch Wiki](https://
 
 <p align="center">
   Copyright &copy; 2020-present
-  <a href="https://github.com/Fadyio" target="_blank">Fady</a>
+  <a href="https://Fadyio.com" target="_blank">Fady</a>
 </p>
 <p align="center">
   <a href="https://github.com/Fadyio/nvim/blob/master/LICENSE"
