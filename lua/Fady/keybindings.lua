@@ -84,11 +84,9 @@ vim.keymap.set("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.li
 vim.keymap.set("n", "<Leader>bb", "<Cmd>lua require('comment-box').lbox()<CR>", {})
 vim.keymap.set("v", "<Leader>bb", "<Cmd>lua require('comment-box').lbox()<CR>", {})
 -- centered adapted box with centered text
-vim.keymap.set("n", "<Leader>bc", "<Cmd>lua require('comment-box').accbox()<CR>", {})
-vim.keymap.set("v", "<Leader>bc", "<Cmd>lua require('comment-box').accbox()<CR>", {})
--- centered line
-vim.keymap.set("n", "<Leader>bl", "<Cmd>lua require('comment-box').cline()<CR>", {})
-keymap("i", "<M-l>", "<Cmd>lua require('comment-box').cline()<CR>", {}) -- Git
+vim.keymap.set("n", "<Leader>bc", "<Cmd>lua require('comment-box').acbox()<CR>", {})
+vim.keymap.set("v", "<Leader>bc", "<Cmd>lua require('comment-box').acbox()<CR>", {})
+-- LazyGit
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", opts)
 
 --  markdown preview plugin for (neo)vim

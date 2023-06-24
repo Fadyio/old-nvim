@@ -27,6 +27,8 @@ vim.opt.filetype = "on"
 vim.opt.swapfile = false -- don't use swapfile
 vim.opt.mouse = "a" -- allow the mouse to be used in neovim
 vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 --------------------------------------------------------------------------- }}}
 -- UI config

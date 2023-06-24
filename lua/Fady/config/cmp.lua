@@ -105,12 +105,12 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp", keyword_length = 1 },
 	}, {
-		{ name = "luasnip", keyword_length = 3 },
+		{ name = "luasnip", keyword_length = 2 },
 		{ name = "nvim_lua" },
 		{ name = "path" },
-		{ name = "buffer", keyword_length = 5 },
+		{ name = "buffer", keyword_length = 2 },
 		{ name = "nvim_lsp_signature_help" },
-		{ name = "rg", keyword_length = 5 },
+		{ name = "rg", keyword_length = 2 },
 	}),
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
