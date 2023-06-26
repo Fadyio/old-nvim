@@ -62,7 +62,6 @@ require("lazy").setup({
 	{ "saadparwaiz1/cmp_luasnip" },
 	{ "hrsh7th/cmp-nvim-lua" },
 	{ "hrsh7th/cmp-cmdline" },
-	{ "lukas-reineke/cmp-rg" },
 	{ "onsails/lspkind.nvim" },
 	{ "hrsh7th/cmp-nvim-lsp-signature-help", lazy = true },
 	{
@@ -118,7 +117,6 @@ require("lazy").setup({
 			"debugloop/telescope-undo.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			{ "nvim-telescope/telescope-frecency.nvim" },
-			{ "debugloop/telescope-undo.nvim" },
 		},
 	},
 	--------------------------- UI ------------------------------------

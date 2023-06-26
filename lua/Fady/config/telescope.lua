@@ -121,5 +121,4 @@ for hl, col in pairs(TelescopeColor) do
 end
 
 require("telescope").load_extension("fzf")
-require("telescope").load_extension("undo")
 require("telescope").load_extension("frecency")
