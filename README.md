@@ -28,7 +28,6 @@
 ![Screenshot](./assets/Nvim2.png)
 ![Screenshot](./assets/Nvim3.png)
 ![Screenshot](./assets/Nvim4.png)
-![Screenshot](./assets/Nvim5.png)
 
 This is my NeoVim config (for version 0.7 and greater).
 
