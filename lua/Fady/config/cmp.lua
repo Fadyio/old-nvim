@@ -89,11 +89,12 @@ cmp.setup({
 		format = lspkind.cmp_format({
 			mode = "symbol_text", -- show only symbol annotations
 			menu = {
-				buffer = "[Buf]",
-				nvim_lsp = "[LSP]",
-				luasnip = "[Snip]",
-				path = "[Path]",
-				nvim_lua = "[Lua]",
+				buffer = "[]",
+				copilot = "[ ]",
+				nvim_lsp = "[ ]",
+				luasnip = "[ ]",
+				path = "[ ]",
+				nvim_lua = "[]",
 			},
 			maxwidth = 20, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
 			ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
@@ -106,6 +107,7 @@ cmp.setup({
 		{ name = "nvim_lsp", keyword_length = 1 },
 	}, {
 		{ name = "luasnip", keyword_length = 2 },
+		{ name = "copilot", group_index = 2 },
 		{ name = "nvim_lua" },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 2 },
@@ -154,6 +156,7 @@ vim.api.nvim_set_hl(0, "CmpItemKindMethod", { link = "CmpItemKindFunction" })
 vim.api.nvim_set_hl(0, "CmpItemKindKeyword", { bg = "NONE", fg = "#D4D4D4" })
 vim.api.nvim_set_hl(0, "CmpItemKindProperty", { link = "CmpItemKindKeyword" })
 vim.api.nvim_set_hl(0, "CmpItemKindUnit", { link = "CmpItemKindKeyword" })
+vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 
 -- Use buffer source for `/`
 cmp.setup.cmdline("/", {

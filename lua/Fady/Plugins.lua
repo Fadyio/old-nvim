@@ -51,6 +51,7 @@ require("lazy").setup({
 	{ "jayp0521/mason-null-ls.nvim" },
 	-- Autocompletion with CMP
 	{ "hrsh7th/nvim-cmp" }, -- Required
+	-- LSP source for nvim-cmp
 	{ "hrsh7th/cmp-nvim-lsp" }, -- Required
 	{
 		"L3MON4D3/LuaSnip",
@@ -61,6 +62,15 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-path" },
 	{ "saadparwaiz1/cmp_luasnip" },
 	{ "hrsh7th/cmp-nvim-lua" },
+	{ "zbirenbaum/copilot.lua", lazy = true },
+	{
+		"zbirenbaum/copilot-cmp",
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	},
+	--  A collection of common configurations for the Nvim LSP client
+	{ "neovim/nvim-lspconfig" },
 	{ "hrsh7th/cmp-cmdline" },
 	{ "onsails/lspkind.nvim" },
 	{ "hrsh7th/cmp-nvim-lsp-signature-help", lazy = true },
@@ -120,7 +130,7 @@ require("lazy").setup({
 	-------------------------- Telescope -----------------------------
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		tag = "0.1.3",
 		dependencies = {
 			"debugloop/telescope-undo.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
