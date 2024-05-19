@@ -10,6 +10,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(event) end,
 })
 
+local lspconfig = require("lspconfig")
+
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
@@ -27,15 +29,15 @@ require("mason-lspconfig").setup({
 })
 
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
-require("lspconfig").pyright.setup({})
-require("lspconfig").ansiblels.setup({})
-require("lspconfig").bashls.setup({})
-require("lspconfig").docker_compose_language_service.setup({})
-require("lspconfig").dockerls.setup({})
-require("lspconfig").jsonls.setup({
+lspconfig.pyright.setup({})
+lspconfig.ansiblels.setup({})
+lspconfig.bashls.setup({})
+lspconfig.docker_compose_language_service.setup({})
+lspconfig.dockerls.setup({})
+lspconfig.jsonls.setup({
 	capabilities = capabilities,
 })
-local lspconfig = require("lspconfig")
+
 lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {
@@ -180,3 +182,5 @@ lspconfig.yamlls.setup({
 		},
 	},
 })
+
+vim.api.nvim_set_hl(0, "LspInlayHint", { link = "NvimDapVirtualText" })

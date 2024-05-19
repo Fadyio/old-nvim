@@ -35,8 +35,7 @@ require("lazy").setup({
 
 	-------------------------- LSP -----------------------------------
 	-- LSP Support
-	{ "neovim/nvim-lspconfig" }, -- Required
-	-- {  "b0o/schemastore.nvim",},
+	{ "neovim/nvim-lspconfig" },
 	{
 		-- Optional
 		"williamboman/mason.nvim",
@@ -92,8 +91,6 @@ require("lazy").setup({
 	{ "nvim-tree/nvim-tree.lua" },
 	-- display a popup with possible key bindings of the command you started typing
 	{ "folke/which-key.nvim", lazy = true },
-	-- Smart and Powerful commenting plugin for neovim
-	{ "numToStr/Comment.nvim", event = "VeryLazy" },
 	-- Neogit
 	{ "NeogitOrg/neogit" },
 	-- Diffview
@@ -159,7 +156,7 @@ require("lazy").setup({
 		dependencies = { "rcarriga/nvim-notify" },
 	},
 	-- adds indentation guides to all lines (including empty lines).
-	-- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	-- customizable start screen for neovim.
 	{ "goolord/alpha-nvim", lazy = true },
 	-- Nvim-web-devicons
@@ -168,7 +165,7 @@ require("lazy").setup({
 	{ "nvim-lualine/lualine.nvim" },
 
 	--  The neovim tabline plugin
-	{ "akinsho/bufferline.nvim", version = "*" },
+	{ "akinsho/bufferline.nvim" },
 	--  Smooth scrolling neovim plugin written in lua
 	{ "karb94/neoscroll.nvim" },
 	-- Treesitter

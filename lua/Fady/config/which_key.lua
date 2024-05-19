@@ -101,8 +101,9 @@ local mappings = {
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["x"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
-	["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
 	["f"] = { "<cmd>Telescope find_files<cr>", "Find files" },
+	["h"] = { "<cmd>lua vim.lsp.inlay_hint.get({ bufnr = 0 })<cr>", "Inlay Hint" },
+
 	["U"] = { "<cmd>Telescope undo<cr>", "Undo Tree" },
 	["z"] = {
 		"<cmd>lua require('telescope.builtin').find_files({hidden = true})<cr>",

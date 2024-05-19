@@ -76,10 +76,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Comment and Comment box
-vim.keymap.set("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
-vim.keymap.set("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
-
 -- LSP keymap
 vim.keymap.set("n", "K", "<cmd>lua require('goto-preview').goto_preview_definition() <cr>", opts)
 vim.keymap.set("n", "J", "<cmd>lua require('goto-preview').close_all_win() <cr>", opts)
