@@ -144,28 +144,12 @@ vim.diagnostic.config({
 	},
 })
 
--- Run gofmt + goimports on save
-local format_sync_grp = vim.api.nvim_create_augroup("goimports", {})
+-- Create an autocommand group named 'goimports'
+ local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*.go",
-	callback = function()
-		require("go.format").goimports()
-	end,
-	group = format_sync_grp,
-})
-
--- Auto Close nvim when nvim-tree is the last window.
-vim.api.nvim_create_autocmd("BufEnter", {
-	group = vim.api.nvim_create_augroup("NvimTreeClose", { clear = true }),
-	pattern = "NvimTree_*",
-	callback = function()
-		local layout = vim.api.nvim_call_function("winlayout", {})
-		if
-			layout[1] == "leaf"
-			and vim.api.nvim_buf_get_option(vim.api.nvim_win_get_buf(layout[2]), "filetype") == "NvimTree"
-			and layout[3] == nil
-		then
-			vim.cmd("confirm quit")
-		end
-	end,
+  pattern = "*.go",
+  callback = function()
+   require('go.format').goimports()
+  end,
+  group = format_sync_grp,
 })

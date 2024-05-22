@@ -61,6 +61,15 @@ require("lazy").setup({
 	{ "AndreM222/copilot-lualine" },
 	{ "nvimtools/none-ls.nvim" },
 	{ "jay-babu/mason-null-ls.nvim" },
+  {
+  "ray-x/go.nvim",
+  config = function()
+    require("go").setup()
+  end,
+  event = {"CmdlineEnter"},
+  ft = {"go", 'gomod'},
+  build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+},
   	{
 		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		config = function()
