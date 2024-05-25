@@ -22,7 +22,6 @@ require("catppuccin").setup({
 		gitsigns = true,
 		treesitter = true,
 		notify = true,
-		nvimtree = true,
 		treesitter_context = true,
 		rainbow_delimiters = true,
 		alpha = true,
@@ -70,6 +69,3 @@ require("catppuccin").setup({
 
 -- setup must be called before loading
 vim.cmd.colorscheme("catppuccin")
-
--- config for neoscroll
-require("neoscroll").setup()

@@ -163,7 +163,19 @@ require("lazy").setup({
 	--  The neovim tabline plugin
 	{ "akinsho/bufferline.nvim" },
 	--  Smooth scrolling neovim plugin written in lua
-	{ "karb94/neoscroll.nvim" },
+	{
+		"karb94/neoscroll.nvim",
+		event = { "BufReadPost", "BufNewFile" },
+		config = function()
+			local opts = {
+				mappings = {
+					"<C-u>",
+					"<C-d>",
+				},
+			}
+			require("neoscroll").setup(opts)
+		end,
+	},
 	-- Treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
