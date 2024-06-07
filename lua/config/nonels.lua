@@ -46,6 +46,7 @@ require("mason-null-ls").setup({
 		"golangci_lint",
 		"hadolint",
 		"todo_comments",
+		"shellharden",
 		"trail_space",
 		"zsh",
 		"yamllint",
