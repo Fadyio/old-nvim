@@ -92,7 +92,7 @@ lualine.setup({
 		lualine_b = { "branch", diff, diagnostics },
 		lualine_c = { "filename" },
 		lualine_x = { "encoding", "fileformat", filetype },
-		lualine_y = { "copilot", '"Lsp " .. tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))' },
+		lualine_y = { '"Lsp " .. tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))' },
 		lualine_z = { "location", "progress" },
 	},
 	tabline = {},

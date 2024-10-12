@@ -47,7 +47,6 @@ local vopts = {
 local wk = require("which-key")
 
 wk.add({
-  { "<leader>a",  "<cmd>Alpha<cr>",                desc = "Alpha" },
   { "<leader>w",  "<cmd>w!<CR>",                   desc = "Save" },
   { "<leader>q",  "<cmd>q!<CR>",                   desc = "Quit" },
   { "<leader>x",  "<cmd>bdelete!<CR>",             desc = "Close Buffer" },

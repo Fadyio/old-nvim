@@ -1,8 +1,3 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by Fady nagh from http://fadyio.com │
---                │             Email:me@fadyio.com             │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	return
@@ -13,11 +8,6 @@ local luasnip = require("luasnip")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lspkind = require("lspkind")
-lspkind.init({
-	symbol_map = {
-		Copilot = "",
-	},
-})
 
 require("nvim-autopairs").setup({
 	disable_filetype = { "TelescopePrompt", "vim" },
@@ -110,7 +100,6 @@ cmp.setup({
 	}, {
 		{ name = "luasnip", keyword_length = 2 },
 		{ name = "copilot", group_index = 2 },
-		{ name = "nvim_lua" },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 2 },
 	}),
