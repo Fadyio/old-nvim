@@ -103,12 +103,6 @@ require("lazy").setup({
   { "folke/trouble.nvim" },
   -- white_check_mark Highlight, list and search todo comments in your projects
   { "folke/todo-comments.nvim" },
-  {
-    "rmagatti/goto-preview",
-    config = function()
-      require("goto-preview").setup({})
-    end,
-  },
   --  Neovim's answer to the mouse
   {
     "folke/flash.nvim",
@@ -147,8 +141,6 @@ require("lazy").setup({
     event = "VeryLazy",
     dependencies = { "rcarriga/nvim-notify" },
   },
-  -- adds indentation guides to all lines (including empty lines).
-  { "lukas-reineke/indent-blankline.nvim",      main = "ibl",  opts = {} },
   -- Nvim-web-devicons
   { "nvim-tree/nvim-web-devicons" },
   -- statline for neovim

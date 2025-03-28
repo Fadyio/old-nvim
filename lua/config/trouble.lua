@@ -1,8 +1,3 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by Fady nagh from http://fadyio.com │
---                │             Email:me@fadyio.com             │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
 require("trouble").setup({
 	position = "bottom", -- position of the list can be: bottom, top, left, right
 	height = 10, -- height of the trouble list when position is top or bottom

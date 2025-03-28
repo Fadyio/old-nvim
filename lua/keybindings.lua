@@ -1,9 +1,3 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by Fady nagh from http://fadyio.com │
---                │             Email:me@fadyio.com             │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
-
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
@@ -56,18 +50,14 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Maintain the cursor position when yanking a visual selection
--- http://ddrscott.github.io/blog/2016/yank-without-jank/
 keymap("v", "y", "myy`y")
 keymap("v", "Y", "myY`y")
 
 -- splits
-keymap("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap("n", "<leader>se", "<C-w>=") -- split windows equal width
+keymap("n", "<leader>sv", "<C-w>v")     -- split window vertically
+keymap("n", "<leader>sh", "<C-w>s")     -- split window horizontally
+keymap("n", "<leader>se", "<C-w>=")     -- split windows equal width
 keymap("n", "<leader>sx", ":close<CR>") --  close the current split window
-
--- tabs
-keymap("n", "<leader>to", ":tabnew<CR>") -- open new tab
 
 -- Visual Block --
 -- Move text up and down
@@ -75,10 +65,3 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
--- LSP keymap
-keymap("n", "K", "<cmd>lua require('goto-preview').goto_preview_definition() <cr>", opts)
-keymap("n", "J", "<cmd>lua require('goto-preview').close_all_win() <cr>", opts)
--- vim.keymap.set("n", "", "<cmd>lua require('goto-preview').goto_preview_references() <cr>", opts)
-keymap("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)

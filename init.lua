@@ -1,9 +1,3 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by Fady nagh from http://fadyio.com │
---                │             Email:me@fadyio.com             │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
-
 -- Neovim Lua script to dynamically load .lua config files
 function requirePath(path)
 	local files = io.popen('find "$HOME"/.config/nvim/lua/' .. path .. " -type f")
@@ -18,14 +12,12 @@ function requirePath(path)
 	end
 end
 
-------------------------------------------------------
---- All My plugins and it's configurations
---- All My Settings
+--- Settings
 require("options")
--- All my Plugins
+-- Plugins
 require("Plugins")
---- All My Keybindings
+--- Keybindings
 require("keybindings")
---- load autocommands
+--- autocommands
 require("autocmds")
 requirePath("config")

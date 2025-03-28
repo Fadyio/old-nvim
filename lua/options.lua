@@ -1,13 +1,3 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by @Fadynagh from http://fadyio.com │
---                │             Email: git@fadyio.com           │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
-----------------------------------------------------------------------------
---                                 ╭──────────╮
---                                 │ settings │
---                                 ╰──────────╯
-
 local opt = vim.opt
 
 -- Encoding settings: UTF-8 for internal and file encoding
@@ -47,12 +37,24 @@ opt.cursorline = true -- Highlight the current line
 opt.laststatus = 3 -- Only the last window will always have a status line
 opt.showcmd = false -- Hide (partial) command in the last line of the screen (for performance)
 
+opt.foldmethod = "marker"
+opt.foldlevel = 99
+opt.foldenable = true
+
 -- Search settings
 opt.ignorecase = true -- Ignore case in search patterns
 opt.inccommand = "nosplit" -- Preview incremental substitute
 opt.smartcase = true -- Override ignorecase if search pattern contains uppercase letters
 opt.hlsearch = true -- Highlight all matches on previous search pattern
 opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
+
+-- Better command completion
+opt.wildignorecase = true
+opt.wildignore:append("**/node_modules/*")
+opt.wildignore:append("**/.git/*")
+
+-- Avoid showing extra messages when using completion
+opt.shortmess:append("c")
 
 -- Window settings
 opt.splitbelow = true -- Force all horizontal splits to go below current window
@@ -96,7 +98,6 @@ local disabled_plugins = {
 	"optwin",
 	"compiler",
 	"bugreport",
-	"ftplugin",
 }
 for _, plugin in pairs(disabled_plugins) do
 	vim.g["loaded_" .. plugin] = 1

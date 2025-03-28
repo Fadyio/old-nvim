@@ -1,100 +1,95 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by Fady nagh from http://fadyio.com │
---                │             Email:me@fadyio.com             │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
-	return
+  return
 end
 
 local hide_in_width = function()
-	return vim.fn.winwidth(0) > 80
+  return vim.fn.winwidth(0) > 80
 end
 local mode_icons = {
-	["n"] = " ",
-	["no"] = " ",
-	["nov"] = " ",
-	["noV"] = " ",
-	["niI"] = " ",
-	["niR"] = " ",
-	["niV"] = " ",
-	["v"] = " ",
-	["V"] = " ",
-	["s"] = " ",
-	["S"] = " ",
-	["i"] = " I",
-	["ic"] = " I",
-	["ix"] = " I",
-	["R"] = " ",
-	["Rc"] = " ",
-	["Rv"] = " ",
-	["Rx"] = " ",
-	["r"] = " ",
-	["rm"] = " ",
-	["r?"] = " ",
-	["c"] = " ",
-	["cv"] = " ",
-	["ce"] = " ",
-	["!"] = " ",
-	["t"] = " 󰰤",
-	["nt"] = " 󰰤",
+  ["n"] = " ",
+  ["no"] = " ",
+  ["nov"] = " ",
+  ["noV"] = " ",
+  ["niI"] = " ",
+  ["niR"] = " ",
+  ["niV"] = " ",
+  ["v"] = " ",
+  ["V"] = " ",
+  ["s"] = " ",
+  ["S"] = " ",
+  ["i"] = " I",
+  ["ic"] = " I",
+  ["ix"] = " I",
+  ["R"] = " ",
+  ["Rc"] = " ",
+  ["Rv"] = " ",
+  ["Rx"] = " ",
+  ["r"] = " ",
+  ["rm"] = " ",
+  ["r?"] = " ",
+  ["c"] = " ",
+  ["cv"] = " ",
+  ["ce"] = " ",
+  ["!"] = " ",
+  ["t"] = " 󰰤",
+  ["nt"] = " 󰰤",
 }
 
 local function get_mode()
-	local mode = vim.api.nvim_get_mode().mode
-	if mode_icons[mode] == nil then
-		print(mode)
-		return mode
-	end
+  local mode = vim.api.nvim_get_mode().mode
+  if mode_icons[mode] == nil then
+    print(mode)
+    return mode
+  end
 
-	return mode_icons[mode] .. " "
+  return mode_icons[mode] .. " "
 end
 
 local diagnostics = {
-	"diagnostics",
-	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn", "hint", "info" },
-	symbols = { error = " ", warn = " ", hint = " ", info = "󰬐 " },
-	colored = true,
-	always_visible = true,
+  "diagnostics",
+  sources = { "nvim_diagnostic" },
+  sections = { "error", "warn", "hint", "info" },
+  symbols = { error = " ", warn = " ", hint = " ", info = "󰬐 " },
+  colored = true,
+  always_visible = true,
 }
 
 local diff = {
-	"diff",
-	colored = true,
-	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-	cond = hide_in_width,
+  "diff",
+  colored = true,
+  symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
+  cond = hide_in_width,
 }
 
 local filetype = {
-	"filetype",
-	icons_enabled = true,
+  "filetype",
+  icons_enabled = true,
 }
 
 local location = {
-	"location",
-	padding = 0,
+  "location",
+  padding = 0,
 }
 
 lualine.setup({
-	options = {
-		icons_enabled = true,
-		theme = "catppuccin",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
-		always_divide_middle = true,
-		globalstatus = true,
-		disabled_filetypes = { "alpha", "dashboard" },
-	},
-	sections = {
-		lualine_a = { get_mode },
-		lualine_b = { "branch", diff, diagnostics },
-		lualine_c = { "filename" },
-		lualine_x = { "encoding", "fileformat", filetype },
-		lualine_y = { '"Lsp " .. tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))' },
-		lualine_z = { "location", "progress" },
-	},
-	tabline = {},
-	extensions = {},
+  options = {
+    icons_enabled = true,
+    theme = "catppuccin",
+    component_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
+    always_divide_middle = true,
+    globalstatus = true,
+    disabled_filetypes = { "alpha", "dashboard" },
+  },
+  sections = {
+    lualine_a = { get_mode },
+    lualine_b = { "branch", diff, diagnostics },
+    lualine_c = { "filename" },
+    lualine_x = { "encoding", "fileformat", filetype },
+    lualine_y = { '"Lsp " .. tostring(#vim.tbl_keys(vim.lsp.get_clients()))' },
+    lualine_z = { "location", "progress" },
+  },
+  tabline = {},
+  extensions = {},
 })

@@ -1,9 +1,3 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by Fady nagh from http://fadyio.com │
---                │             Email:me@fadyio.com             │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
---
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
   return

@@ -1,8 +1,3 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by Fady nagh from http://fadyio.com │
---                │             Email:me@fadyio.com             │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
 require("catppuccin").setup({
   flavour = "auto", -- latte, frappe, macchiato, mocha
   background = {   -- :h background

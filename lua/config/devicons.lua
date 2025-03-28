@@ -1,8 +1,3 @@
---                ╭─────────────────────────────────────────────╮
---                │ Written by Fady nagh from http://fadyio.com │
---                │             Email:me@fadyio.com             │
---                │               Github: @fadyio               │
---                ╰─────────────────────────────────────────────╯
 local nvim_web_devicons_status_ok, nvim_web_devicons = pcall(require, "nvim-web-devicons")
 if not nvim_web_devicons_status_ok then
 	return
