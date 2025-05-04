@@ -1,6 +1,8 @@
-<p align="center">
+div align="center">
+  <img alt="Logo" src="https://github.com/Fadyio/Fadyio.com/blob/main/public/static/logo.svg" height="200"/>
+</div>
 
-[![](https://img.shields.io/badge/Neovim-0.9+-blueviolet.svg?style=for-the-badge&logo=Neovim&color=ee999f&logoColor=D9E0EE&labelColor=302D41)](https://github.com/neovim/neovim)
+<p align="center">
   <a href="https://github.com/Fadyio/nvim/stargazers">
     <img
       alt="Stargazers"
@@ -19,6 +21,11 @@
       src="https://img.shields.io/github/contributors/Fadyio/nvim?style=for-the-badge&logo=opensourceinitiative&color=abcf84&logoColor=d9e0ee&labelColor=282a36"
     />
   </a>
+    <a href="https://github.com/Fadyio/nvim">
+    <img src="https://img.shields.io/github/repo-size/Fadyio/nvim?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41" alt="Repo Size">
+  </a>
+
+  <img src="https://img.shields.io/github/last-commit/Fadyio/nvim?&style=for-the-badge&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41" alt="Last Commit">
 </p>
 
 
@@ -91,19 +98,8 @@ After installation is complete, don't forget to configure your terminal to start
 Each terminal does this differently, so be sure to checkout [Arch Wiki](https://wiki.archlinux.org/) if you run into any troubles.
 
 
+## License
 
-<p align="center">
-  Copyright &copy; 2020-present
-  <a href="https://Fadyio.com" target="_blank">Fady</a>
-</p>
-<p align="center">
-  <a href="https://github.com/Fadyio/nvim/blob/master/LICENSE"
-    ><img
-      src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=282a36&colorB=c678dd"
-  /></a>
-</p>
-<div align="center" id="madewithlua">
+<p align="center"><a href="https://github.com/fadyio/Nvim/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>
 
-[![Lua](https://img.shields.io/badge/Made%20with%20Lua-blue.svg?style=for-the-badge&logo=lua)](#madewithlua)
-
-</div>
+Copyright (c) 2025 [@Fadyio.com](https://fadyio.com).

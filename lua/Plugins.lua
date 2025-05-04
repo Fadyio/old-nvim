@@ -156,7 +156,6 @@ require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter-context" },
   { "nvim-treesitter/nvim-treesitter-textobjects" },
   { "JoosepAlviste/nvim-ts-context-commentstring" },
-  { "HiPhish/rainbow-delimiters.nvim" },
   {
     "catppuccin/nvim",
     lazy = false,
