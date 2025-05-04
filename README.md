@@ -1,4 +1,4 @@
-div align="center">
+<div align="center">
   <img alt="Logo" src="https://github.com/Fadyio/Fadyio.com/blob/main/public/static/logo.svg" height="200"/>
 </div>
 
