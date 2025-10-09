@@ -1,9 +1,8 @@
 require("bufferline").setup({
-  highlights = require("catppuccin.groups.integrations.bufferline").get(),
   options = {
     mode = "buffers",
     style_preset = require("bufferline").style_preset.default,
-    numbers = "ordinal", 
+    numbers = "ordinal",
     modified_icon = "",
     buffer_close_icon = "",
     close_icon = "",
