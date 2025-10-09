@@ -83,7 +83,6 @@ cmp.setup({
 			menu = {
 				nvim_lsp = "",
 				luasnip = "",
-				copilot = "",
 				nvim_lua = "",
 				buffer = "",
 				path = "",
@@ -99,7 +98,6 @@ cmp.setup({
 		{ name = "nvim_lsp", keyword_length = 1 },
 	}, {
 		{ name = "luasnip", keyword_length = 2 },
-		{ name = "copilot", group_index = 2 },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 2 },
 	}),

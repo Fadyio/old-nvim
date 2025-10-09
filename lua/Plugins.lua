@@ -43,15 +43,7 @@ require("lazy").setup({
   { "hrsh7th/cmp-nvim-lsp" },
   { "hrsh7th/cmp-buffer" },
   { "hrsh7th/cmp-path" },
-  { "hrsh7th/cmp-cmdline" },
   { "saadparwaiz1/cmp_luasnip" },
-  { "zbirenbaum/copilot.lua",         lazy = true },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
   { "nvimtools/none-ls.nvim" },
   { "jay-babu/mason-null-ls.nvim" },
   {
@@ -96,28 +88,8 @@ require("lazy").setup({
   },
   -- display a popup with possible key bindings of the command you started typing
   { "folke/which-key.nvim",    lazy = true },
-  -- Diffview
-  { "sindrets/diffview.nvim" },
-  --
-  -- A pretty diagnostics, references, telescope results, quickfix and location list
-  { "folke/trouble.nvim" },
   -- white_check_mark Highlight, list and search todo comments in your projects
   { "folke/todo-comments.nvim" },
-  --  Neovim's answer to the mouse
-  {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    ---@type Flash.Config
-    opts = {},
-    --stylua: ignore
-    keys = {
-      { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
-      { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
-      { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
-      { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-      { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
-    },
-  },
   -- powerful autopair plugin for Neovim that supports multiple characters
   {
     "windwp/nvim-autopairs",
@@ -153,9 +125,6 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
   },
-  { "nvim-treesitter/nvim-treesitter-context" },
-  { "nvim-treesitter/nvim-treesitter-textobjects" },
-  { "JoosepAlviste/nvim-ts-context-commentstring" },
   {
     "catppuccin/nvim",
     lazy = false,
