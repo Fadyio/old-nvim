@@ -1,4 +1,3 @@
-local lspconfig = require("lspconfig")
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Define on_attach function to use across LSP configs
@@ -29,15 +28,15 @@ require("mason-lspconfig").setup({
 local get_servers = require("mason-lspconfig").get_installed_servers
 for _, server_name in ipairs(get_servers()) do
     if server_name ~= "lua_ls" and server_name ~= "gopls" and server_name ~= "yamlls" then
-        lspconfig[server_name].setup({
+        vim.lsp.config[server_name] = {
             capabilities = lsp_capabilities,
             on_attach = on_attach,
-        })
+        }
     end
 end
 
 -- Lua language server with custom settings
-lspconfig.lua_ls.setup({
+vim.lsp.config.lua_ls = {
     capabilities = lsp_capabilities,
     on_attach = on_attach,
     settings = {
@@ -54,22 +53,22 @@ lspconfig.lua_ls.setup({
             },
         },
     },
-})
+}
 
 -- GoLang
-lspconfig.gopls.setup({
+vim.lsp.config.gopls = {
     cmd = { "gopls" },
     on_attach = on_attach,
     capabilities = lsp_capabilities,
     filetype = { "go", "gomod", "gowork", "gotmpl" },
-    root_dir = require("lspconfig.util").root_pattern("go.work", "go.mod", ".git"),
-})
+    root_markers = { "go.work", "go.mod", ".git" },
+}
 
 -- YAML with schema support
-lspconfig.yamlls.setup({
+vim.lsp.config.yamlls = {
     on_attach = on_attach,
     capabilities = lsp_capabilities,
-    filetypes = { "yaml", "yml" },
+    filetype = { "yaml", "yml" },
     flags = {
         debounce_text_changes = 150,
     },
@@ -104,7 +103,7 @@ lspconfig.yamlls.setup({
             schemaStore = { enable = true, url = "https://www.schemastore.org/json" },
         },
     },
-})
+}
 
 -- Go auto-formatting
 local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})

@@ -31,7 +31,6 @@ require("lazy").setup({
   -- LSP Support
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
-  { "neovim/nvim-lspconfig" },
   {
     "L3MON4D3/LuaSnip",
     build = "make install_jsregexp",
