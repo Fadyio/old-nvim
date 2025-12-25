@@ -28,7 +28,7 @@
   <img src="https://img.shields.io/github/last-commit/Fadyio/nvim?&style=for-the-badge&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41" alt="Last Commit">
 </p>
 
-
+I no longer use this custom Neovim configuration. This setup is little bit outdated because I have migrated to a LazyVim-based config, which is now maintained in my main GitHub repo.
 
 # Screenshot
 ![Screenshot](./assets/Nvim1.png)
